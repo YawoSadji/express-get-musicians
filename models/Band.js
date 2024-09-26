@@ -1,6 +1,7 @@
-const { Sequelize, db } = require('../db/connection');
+const Sequelize = require('sequelize');
+const db = require('../db/connection');
 
-let Band = db.define('band', {
+const Band = db.define('band', {
     name: Sequelize.STRING,
     genre: Sequelize.STRING
 });
