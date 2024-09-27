@@ -4,7 +4,8 @@ const Band = require('../models/index');
 const Musician = require('../models/index');
 
 bandRouter.get('/', async(req,res)=>{
-    const allBands = await Band.findAll({include: [{model: Musician}]});
+    //{include: [{model: Musician}]}
+    const allBands = await Band.findAll();
     res.json(allBands);
 });
 
